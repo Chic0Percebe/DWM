@@ -1,0 +1,12 @@
+#! /bin/bash
+
+##Status bar
+
+while true; do
+xsetroot -name "$( date +"%F %R" )"
+sleep 1m
+done &
+##Aplicaciones inicio
+~/.fehbg &
+picom --experimental-backends &
+exec dwm
