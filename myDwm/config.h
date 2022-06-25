@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int gappx     = 12;        /* gaps between windows*/
+static const unsigned int gappx     = 16;        /* gaps between windows*/
 static const unsigned int snap      = 40;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -15,11 +15,12 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char col_purple[]      = "#971fe1";
 static const char col_black[]       = "#000000";
-static const char col_salmon[]      = "#FA8072";
+static const char col_salmon[]      = "#fa8072"; 
+static const char sky_blue[]        = "#87ceeb";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_black },
-	[SchemeSel]  = { col_gray4, col_salmon,  col_salmon  },
+	[SchemeSel]  = { col_gray4, sky_blue,  sky_blue  },
 };
 
 /* tagging */
@@ -61,7 +62,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_salmon, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", sky_blue, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 
 #include "shiftview.c"

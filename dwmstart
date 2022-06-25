@@ -3,10 +3,12 @@
 ##Status bar
 
 while true; do
-xsetroot -name "$( date +"%F %R" )"
+xsetroot -name "$(date)"
 sleep 1m
 done &
 ##Aplicaciones inicio
-~/.fehbg &
+gentoo-pipewire-launcher &
+feh --bg-scale /home/alc111/Descargas/z9jidhtnsoo61.png &
 picom --experimental-backends &
+setxkbmap -layout es &
 exec dwm
