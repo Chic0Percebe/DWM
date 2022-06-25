@@ -1,5 +1,5 @@
-# GUIA INSTALACION DWM(Gentoo)
-En primer lugar instalamos las dependencias necesarias, empezando por las de DWM. Para facilitar la instalación de dependencias de picom, instalamos la version base x11-misc/picom y luego compilamos e instalamos la version de jonaburg, que sustituirá la version base.
+# GUÍA DE INSTALACIÓN DWM(Gentoo)
+En primer lugar instalamos las dependencias necesarias, empezando por las de DWM. Para facilitar la instalación de dependencias de picom, instalamos la versión base **x11-misc/picom** y luego compilamos e instalamos la version de jonaburg, que sustituirá la version base.
 ## Dependencias para DWM
 * dev-vcs/git
 * media-libs/fontconfig
@@ -7,13 +7,14 @@ En primer lugar instalamos las dependencias necesarias, empezando por las de DWM
 * x11-libs/libX11
 * x11-libs/libXft
 * x11-libs/libXinerama
-## Dependencias especificas para mi DWM
-* alacritty
-* JetBrainsMono font
+## Dependencias específicas para mi DWM
+* x11-terms/alacritty
+* media-fonts/jetbrains-mono
 * jonaburg/picom(Su instalacion se detalla en otro documento)
-* awesomefonts
-* feh
+* media-fonts/fontawesome
+* media-gfx/feh
 * x11-apps/xsetroot
+* x11-apps/setxkbmap
 ## Dependencias para jonaburg/picom
 * sys-devel/gcc
 * app-text/asciidoc				
@@ -41,7 +42,7 @@ En primer lugar instalamos las dependencias necesarias, empezando por las de DWM
 * x11-libs/xcb-util-image				
 * x11-libs/xcb-util-renderutil
 ## Compilación DWM, DMENU y ST
-Para poder compilar correctamente, habremos de eliminar los ficheros objeto presentes(.o) en cada directorio(dwm, dmenu, y st) y, tras esto, podremos proceder con la instalación. Para hacerlo, ejecutaremos:
+Para poder compilar correctamente, habremos de eliminar los ficheros objeto presentes(.o) en cada directorio(dwm, dmenu, y st) y los posibles ejecutables. Tras esto, podremos proceder con la compilación e instalación. Para hacerlo, ejecutaremos:
 ```
 make && sudo make install
 ```
