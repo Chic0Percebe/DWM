@@ -1,5 +1,5 @@
 # GUIA INSTALACION DWM(Gentoo)
-En primer lugar instalamos las dependencias necesarias, empezando por las de DWM. Para facilitar la instalacion de dependencias de picom, instalamos la version base x11-misc/picom y luego compilamos e instalamos al version de jonaburg, que sustituira la version base.
+En primer lugar instalamos las dependencias necesarias, empezando por las de DWM. Para facilitar la instalación de dependencias de picom, instalamos la version base x11-misc/picom y luego compilamos e instalamos la version de jonaburg, que sustituirá la version base.
 ## Dependencias para DWM
 -dev-vcs/git
 -media-libs/fontconfig
@@ -40,9 +40,9 @@ En primer lugar instalamos las dependencias necesarias, empezando por las de DWM
 -x11-libs/pixman				
 -x11-libs/xcb-util-image				
 -x11-libs/xcb-util-renderutil
-## Compilacion DWM, DMENU y ST
-Para poder compilar correctamente, habremos de eliminar los ficheros objeto presentes(.o) en cada directorio(dwm, dmenu, y st) y, tras esto, podremos proceder con la instalacion. Para hacerlo, ejecutaremos
+## Compilación DWM, DMENU y ST
+Para poder compilar correctamente, habremos de eliminar los ficheros objeto presentes(.o) en cada directorio(dwm, dmenu, y st) y, tras esto, podremos proceder con la instalación. Para hacerlo, ejecutaremos:
 ```
 make && sudo make install
 ```
-Este comando compilara el codigo y posteriormente lo movera a /usr/local/bin. Una vez obtenidos los ejecutables, solo queda mover el script de inicializacion(dwmstart) a una ruta del PATH(preferiblemente /usr/local/bin) y anadir la entrada .desktop a /etc/X11/xsessions, para que sea reconocido por el GDM(en mi caso).
+Este comando compilará el codigo y posteriormente lo movera a **/usr/local/bin**. Una vez obtenidos los ejecutables, sólo queda mover el script de inicialización(dwmstart) a una ruta del PATH(preferiblemente **/usr/local/bin**) y anadir la entrada .desktop a **/etc/X11/xsessions**, para que sea reconocido por el GDM(en mi caso).
