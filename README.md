@@ -46,4 +46,4 @@ Para poder compilar correctamente, habremos de eliminar los ficheros objeto pres
 ```
 make && sudo make install
 ```
-Este comando compilará el codigo y posteriormente lo movera a **/usr/local/bin**. Una vez obtenidos los ejecutables, sólo queda mover el script de inicialización(dwmstart) a una ruta del PATH(preferiblemente **/usr/local/bin**) y anadir la entrada .desktop a **/etc/X11/xsessions**, para que sea reconocido por el GDM(en mi caso).
+Este comando compilará el codigo y posteriormente lo movera a **/usr/local/bin**. Una vez obtenidos los ejecutables, sólo queda mover el script de inicialización(dwmstart) a una ruta del PATH(preferiblemente **/usr/local/bin**) y añadir la entrada .desktop a **/usr/share/xsessions**, para que sea reconocido por el GDM(en mi caso).
