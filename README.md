@@ -15,6 +15,7 @@ En primer lugar instalamos las dependencias necesarias, empezando por las de DWM
 * media-gfx/feh
 * x11-apps/xsetroot
 * x11-apps/setxkbmap
+* media-fonts/kochi-substitute
 ## Dependencias para jonaburg/picom
 * sys-devel/gcc
 * app-text/asciidoc				
@@ -44,6 +45,6 @@ En primer lugar instalamos las dependencias necesarias, empezando por las de DWM
 ## Compilación DWM, DMENU y ST
 Para poder compilar correctamente, habremos de eliminar los ficheros objeto presentes(.o) en cada directorio(dwm, dmenu, y st) y los posibles ejecutables. Tras esto, podremos proceder con la compilación e instalación. Para hacerlo, ejecutaremos:
 ```
-make && sudo make install
+sudo make clean install
 ```
 Este comando compilará el codigo y posteriormente lo movera a **/usr/local/bin**. Una vez obtenidos los ejecutables, sólo queda mover el script de inicialización(dwmstart) a una ruta del PATH(preferiblemente **/usr/local/bin**) y añadir la entrada .desktop a **/usr/share/xsessions**, para que sea reconocido por el GDM(en mi caso).
