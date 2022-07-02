@@ -15,7 +15,9 @@ En primer lugar instalamos las dependencias necesarias, empezando por las de DWM
 * media-gfx/feh
 * x11-apps/xsetroot
 * x11-apps/setxkbmap
-* media-fonts/kochi-substitute
+* media-fonts/kochi-substitute o media-fonts/takao-fonts
+* media-sound/pnmixer
+* gnome-extra/nm-applet
 ## Dependencias para jonaburg/picom
 * sys-devel/gcc
 * app-text/asciidoc				

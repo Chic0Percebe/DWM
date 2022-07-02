@@ -8,7 +8,9 @@ sleep 1m
 done &
 ##Aplicaciones inicio
 gentoo-pipewire-launcher &
-feh --bg-scale /home/alc111/Descargas/dwmbackground.png &
+feh --bg-scale /home/alc111/repos/DWM/wallpaper/dwmbackground.png &
 picom --experimental-backends &
 setxkbmap -layout es &
+pnmixer &
+nm-applet &
 exec dwm
