@@ -1,13 +1,37 @@
 # GUÍA DE INSTALACIÓN DWM(Gentoo)
 En primer lugar instalamos las dependencias necesarias, empezando por las de DWM. Para facilitar la instalación de dependencias de picom, instalamos la versión base **x11-misc/picom** y luego compilamos e instalamos la version de jonaburg, que sustituirá la version base.
-## Dependencias para DWM
+## Dependencias en Arch
+### Dependencias para DWM base
+* git
+* fontconfig
+* xorgproto
+* libx11
+* libxft
+* libxinerama
+### Dependencias específicas para mi DWM
+* alacritty
+* ttf-jetbrains-mono
+* ttf-font-awesome
+* feh
+* xorg-xsetroot
+* xorg-setxkbmap
+* otf-takao(AUR)
+* volctl(AUR)
+* network-manager-applet
+En resumen, la instalación de dependencias sería:
+```
+sudo pacman -S git fontconfig xorgproto libx11 lixft libxinerama alacritty ttf-jetbrains-mono ttf-font-awesome feh xorg-xsetroot xorg-setxkbmap >
+yay -S otf-takao volctl
+```
+## Dependencias en Gentoo
+### Dependencias para DWM base
 * dev-vcs/git
 * media-libs/fontconfig
 * x11-base/xorg-proto
 * x11-libs/libX11
 * x11-libs/libXft
 * x11-libs/libXinerama
-## Dependencias específicas para mi DWM
+### Dependencias específicas para mi DWM
 * x11-terms/alacritty
 * media-fonts/jetbrains-mono
 * jonaburg/picom(Su instalacion se detalla en otro documento)
@@ -18,7 +42,7 @@ En primer lugar instalamos las dependencias necesarias, empezando por las de DWM
 * media-fonts/kochi-substitute o media-fonts/takao-fonts
 * media-sound/pnmixer
 * gnome-extra/nm-applet
-## Dependencias para jonaburg/picom
+### Dependencias para jonaburg/picom
 * sys-devel/gcc
 * app-text/asciidoc				
 * dev-lang/python				
@@ -49,4 +73,9 @@ Para poder compilar correctamente, habremos de eliminar los ficheros objeto pres
 ```
 sudo make clean install
 ```
-Este comando compilará el codigo y posteriormente lo movera a **/usr/local/bin**. Una vez obtenidos los ejecutables, sólo queda mover el script de inicialización(dwmstart) a una ruta del PATH(preferiblemente **/usr/local/bin**) y añadir la entrada .desktop a **/usr/share/xsessions**, para que sea reconocido por el GDM(en mi caso).
+Este comando compilará el codigo y posteriormente lo movera a **/usr/local/bin**. Una vez obtenidos los ejecutables, sólo queda mover el script de inicialización(dwmstart) a una ruta del PATH(preferiblemente **/usr/local/bin**) y añadir la entrada .desktop a **/usr/share/xsessions**, para que sea reconocido por el GDM(en mi caso):
+```
+sudo cp dwmstart /usr/local/bin
+sudo cp dwm.desktop /usr/share/xsessions
+sudo reboot
+```
