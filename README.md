@@ -1,4 +1,4 @@
-# GUÍA DE INSTALACIÓN DWM(Gentoo)
+# GUÍA DE INSTALACIÓN DWM
 En primer lugar instalamos las dependencias necesarias, empezando por las de DWM. Para facilitar la instalación de dependencias de picom, instalamos la versión base **x11-misc/picom** y luego compilamos e instalamos la version de jonaburg, que sustituirá la version base.
 ## Dependencias en Arch
 ### Dependencias para DWM base
@@ -82,9 +82,11 @@ Para poder compilar correctamente, habremos de eliminar los ficheros objeto pres
 ```
 sudo make clean install
 ```
-Este comando compilará el codigo y posteriormente lo movera a **/usr/local/bin**. Una vez obtenidos los ejecutables, sólo queda mover el script de inicialización(dwmstart) a una ruta del PATH(preferiblemente **/usr/local/bin**) y añadir la entrada .desktop a **/usr/share/xsessions**, para que sea reconocido por el GDM(en mi caso):
+Este comando compilará el codigo y posteriormente lo movera a **/usr/local/bin**. Una vez obtenidos los ejecutables, sólo queda mover el script de inicialización(dwmstart) a una ruta del PATH(preferiblemente **/usr/local/bin**) y añadir la entrada .desktop a **/usr/share/xsessions**, para que sea reconocido por el GDM(en mi caso). Para acabar, nos dirigiremos al directorio .config(/home/user/.config) y copiaremos el archivo de configuración de picom aportado en una carpeta llamada picom(si no existe la creamos):
 ```
 sudo cp dwmstart /usr/local/bin
 sudo cp dwm.desktop /usr/share/xsessions
+mkdir /home/alc111/.config/picom
+cp picom.conf /home/alc111/.config/picom
 sudo reboot
 ```
