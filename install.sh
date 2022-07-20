@@ -7,5 +7,12 @@ sudo make clean install
 cd ..
 sudo cp dwmstart /usr/local/bin
 sudo cp dwm.desktop /usr/share/xsessions
-mkdir /home/alc111/.config/picom
+cd ..
+git clone https://github.com/jonaburg/picom.git
+cd picom
+meson --buildtype=release . build
+ninja -C build
+sudo ninja -C build install
+cd ../DWM
+mkdir -p /home/alc111/.config/picom
 cp picom.conf /home/alc111/.config/picom
