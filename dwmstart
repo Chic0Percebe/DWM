@@ -7,7 +7,6 @@ xsetroot -name "$(date)"
 sleep 1m
 done &
 ##Aplicaciones inicio
-gentoo-pipewire-launcher &
 feh --bg-scale /home/alc111/repos/DWM/wallpaper/dwmbackground.png &
 picom --experimental-backends &
 setxkbmap -layout es &
