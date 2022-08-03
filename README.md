@@ -16,6 +16,7 @@ En primer lugar instalamos las dependencias necesarias, empezando por las de DWM
 * xorg-xsetroot
 * xorg-setxkbmap
 * network-manager-applet
+* dunst
 * otf-takao(AUR)
 * volctl(AUR)
 * picom-jonaburg-git(AUR)
@@ -23,7 +24,7 @@ En primer lugar instalamos las dependencias necesarias, empezando por las de DWM
 
 En resumen, la instalación de dependencias sería:
 ```
-sudo pacman -S git fontconfig xorgproto libx11 lixft libxinerama alacritty ttf-jetbrains-mono ttf-font-awesome feh xorg-xsetroot xorg-setxkbmap network-manager-applet
+sudo pacman -S git fontconfig xorgproto libx11 lixft libxinerama alacritty ttf-jetbrains-mono ttf-font-awesome feh xorg-xsetroot xorg-setxkbmap network-manager-applet dunst
 yay -S otf-takao volctl picom-jonaburg-git
 ```
 ## Dependencias en Gentoo
@@ -45,6 +46,7 @@ yay -S otf-takao volctl picom-jonaburg-git
 * media-fonts/kochi-substitute o media-fonts/takao-fonts
 * media-sound/pnmixer
 * gnome-extra/nm-applet
+* x11-misc/dunst
 ### Dependencias para jonaburg/picom
 * sys-devel/gcc
 * app-text/asciidoc				
@@ -75,7 +77,7 @@ yay -S otf-takao volctl picom-jonaburg-git
 
 En resumen, la instalación de dependencias sería:
 ```
-sudo emerge --ask dev-vcs/git media-libs/fontconfig x11-base/xorg-proto x11-libs/libX11 x11-libs/libXft x11-libs/libXinerama x11-terms/alacritty media-fonts/jetbrains-mono media-fonts/fontawesome media-gfx/feh x11-apps/xsetroot x11-apps/setxkbmap media-fonts/kochi-substitute(o media-fonts/takao-fonts) media-sound/pnmixer gnome-extra/nm-applet sys-devel/gcc app-text/asciidoc dev-lang/python dev-libs/libconfig	dev-libs/libev dev-libs/libpcre dev-libs/uthash	dev-python/xcffib	dev-util/meson dev-util/meson-format-array dev-util/ninja sys-apps/dbus virtual/opengl virtual/pkgconfig x11-apps/xhost x11-base/xorg-server x11-libs/libXext x11-libs/libdrm x11-libs/libxcb x11-libs/pixman x11-libs/xcb-util-image x11-libs/xcb-util-renderutil
+sudo emerge --ask dev-vcs/git media-libs/fontconfig x11-base/xorg-proto x11-libs/libX11 x11-libs/libXft x11-libs/libXinerama x11-terms/alacritty media-fonts/jetbrains-mono media-fonts/fontawesome media-gfx/feh x11-apps/xsetroot x11-apps/setxkbmap media-fonts/kochi-substitute(o media-fonts/takao-fonts) media-sound/pnmixer gnome-extra/nm-applet sys-devel/gcc app-text/asciidoc dev-lang/python dev-libs/libconfig	dev-libs/libev dev-libs/libpcre dev-libs/uthash	dev-python/xcffib	dev-util/meson dev-util/meson-format-array dev-util/ninja sys-apps/dbus virtual/opengl virtual/pkgconfig x11-apps/xhost x11-base/xorg-server x11-libs/libXext x11-libs/libdrm x11-libs/libxcb x11-libs/pixman x11-libs/xcb-util-image x11-libs/xcb-util-renderutil x11-misc/dunst
 ```
 ## Compilación DWM, DMENU y ST
 Para poder compilar correctamente, habremos de eliminar los ficheros objeto presentes(.o) en cada directorio(dwm, dmenu, y st) y los posibles ejecutables. Tras esto, podremos proceder con la compilación e instalación. Para hacerlo, ejecutaremos:
